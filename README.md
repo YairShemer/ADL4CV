@@ -16,3 +16,11 @@ Four visualization tools:
 ### Discusion
 * It can be relevant for object detection task if apply classification setting on our objects.
 * Checking classification results on objects can be useful for getting a performance bound and for training the backbone.
+
+## 2. Similarity Learning
+### Lecturer outlines
+* Train siames network (with shared weights) and then measure the distance between features.
+* Train on positive pairs and negative pairs.
+* Training with triplet loss is usfull. Especially when using hard examples.
+* An advntage of similarity learning over classification - don't need to train for every new calss.
+* Usefull for manyy computer vision tasks. E.g. image ilignment, object recognition and object tracking.
