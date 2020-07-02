@@ -24,3 +24,11 @@ Four visualization tools:
 * Training with triplet loss is usfull. Especially when using hard examples.
 * An advntage of similarity learning over classification - don't need to train for every new calss.
 * Usefull for manyy computer vision tasks. E.g. image ilignment, object recognition and object tracking.
+
+## 3. Auto Encoders and VAE
+### Lecturer outlines
+
+* 3 methods of up-sampling:
+  * simple up-sampling, corresponds to padding by zeros
+  * interpolation, e.g. nearest-neighbor, bilinear, cubic
+  * deconvolution: saving max pooled index location.
