@@ -35,8 +35,11 @@ Four visualization tools:
 * 3 methods of up-sampling:
   * Simple up-sampling, corresponds to padding by zeros.
   * Interpolation, e.g. nearest-neighbor, bilinear, bicubic.
-  * Deconvolution: saving max pooled index location.
+  * Deconvolution: saving max pooled index location. Good for precise boundaries estimation.
 * Usage examples:
   * Unsupervised learning of data structure for good weights initialization.
   * Prediction of pixel wise values, such as semantic segmentation.
 * UNET
+  * AE with skip connections between corresponding encoder and decoder parts.
+  * The skip connections help to combine low level details that were lost in the compressing process, with the high level represtation extracted by the encoder.
+  * Feature combination is done by simple concatenation.
