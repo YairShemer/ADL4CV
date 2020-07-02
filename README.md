@@ -25,7 +25,7 @@ Four visualization tools:
 * An advntage of similarity learning over classification - don't need to train for every new calss.
 * Usefull for manyy computer vision tasks. E.g. image ilignment, object recognition and object tracking.
 
-## 3. Auto Encoders and VAE
+## 3. [Auto Encoders and VAE](https://www.youtube.com/watch?v=kdVSCtgHGF8&list=PLog3nOPCjKBnjhuHMIXu4ISE4Z4f2jm39&index=4)
 ### Lecturer outlines
 * Auto-Encoders (AE) - A convolutional neural network strcture composed of: 
   * Encoder which produces low dimension represetation of the data.  
