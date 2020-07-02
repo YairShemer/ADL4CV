@@ -27,8 +27,16 @@ Four visualization tools:
 
 ## 3. Auto Encoders and VAE
 ### Lecturer outlines
-
+* Auto-Encoders (AE) - A convolutional neural network strcture composed of: 
+  * Encoder which produces low dimension represetation of the data.  
+    Architecture is similar to classification CNNs, e.g. Resnet.
+  * Eecoder which tries to reproduce the input  
+    Build of blocks of up-sampling layers (for rough reconstruction) followed by convolutional layers (for improved reconstruction).
 * 3 methods of up-sampling:
-  * simple up-sampling, corresponds to padding by zeros
-  * interpolation, e.g. nearest-neighbor, bilinear, cubic
-  * deconvolution: saving max pooled index location.
+  * Simple up-sampling, corresponds to padding by zeros.
+  * Interpolation, e.g. nearest-neighbor, bilinear, bicubic.
+  * Deconvolution: saving max pooled index location.
+* Usage examples:
+  * Unsupervised learning of data structure for good weights initialization.
+  * Prediction of pixel wise values, such as semantic segmentation.
+* UNET
