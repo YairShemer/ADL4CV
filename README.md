@@ -6,7 +6,7 @@
 * Slides: [https://dvl.in.tum.de/slides/adl4cv-ss20/](https://dvl.in.tum.de/slides/adl4cv-ss20/)
 
 ## 1. Visualization and Interpretability
-### Lecture outlines
+### Lecture outline
 Four visualization tools:
 * The occlusion experiment - output an importance score for each pixel of the input image by measuring the effect of an occlusion around the pixel.
 * Present images patches that maximize a specific filter response.
@@ -18,7 +18,7 @@ Four visualization tools:
 * Checking classification results on objects can be useful for getting a performance bound and for training the backbone.
 
 ## 2. Similarity Learning
-### Lecturer outlines
+### Lecture outline
 * Train siames network (with shared weights) and then measure the distance between features.
 * Train on positive pairs and negative pairs.
 * Training with triplet loss is usfull. Especially when using hard examples.
@@ -26,7 +26,7 @@ Four visualization tools:
 * Usefull for manyy computer vision tasks. E.g. image ilignment, object recognition and object tracking.
 
 ## 3. [Auto Encoders and VAE](https://www.youtube.com/watch?v=kdVSCtgHGF8&list=PLog3nOPCjKBnjhuHMIXu4ISE4Z4f2jm39&index=4)
-### Lecturer outlines
+### Lecture outline
 * Auto-Encoders (AE) - A convolutional neural network strcture composed of: 
   * Encoder which produces low dimension represetation of the data.  
     Architecture is similar to classification CNNs, e.g. Resnet.
@@ -36,9 +36,9 @@ Four visualization tools:
   * Simple up-sampling, corresponds to padding by zeros.
   * Interpolation, e.g. nearest-neighbor, bilinear, bicubic.
   * Deconvolution: saving max pooled index location. Good for precise boundaries estimation.
-* Usage examples:
+* Computer vision applications examples:
   * Unsupervised learning of data structure for good weights initialization.
-  * Prediction of pixel wise values, such as semantic segmentation.
+  * Prediction of pixel wise values, such as semantic segmentation or depth.
 * UNET
   * AE with skip connections between corresponding encoder and decoder parts.
   * The skip connections help to combine low level details that were lost in the compressing process, with the high level represtation extracted by the encoder.
