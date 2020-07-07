@@ -27,19 +27,26 @@ Four visualization tools:
 
 ## 3. [Auto Encoders and VAE](https://www.youtube.com/watch?v=kdVSCtgHGF8&list=PLog3nOPCjKBnjhuHMIXu4ISE4Z4f2jm39&index=4)
 ### Lecture outline
-* Auto-Encoders (AE) - A convolutional neural network strcture composed of: 
-  * Encoder which produces low dimension represetation of the data.  
+* Auto-Encoders (AE) - A convolutional neural network (CNN) composed of: 
+  * Encoder which produces low dimensional representation of the data.  
     Architecture is similar to classification CNNs, e.g. Resnet.
-  * Eecoder which tries to reproduce the input  
-    Build of blocks of up-sampling layers (for rough reconstruction) followed by convolutional layers (for improved reconstruction).
+  * Decoder which tries to reproduce the input  
+    Built of blocks of up-sampling layers (for rough reconstruction) followed by convolutional layers (for improved reconstruction).
 * 3 methods of up-sampling:
   * Simple up-sampling, corresponds to padding by zeros.
   * Interpolation, e.g. nearest-neighbor, bilinear, bicubic.
-  * Deconvolution: saving max pooled index location. Good for precise boundaries estimation.
-* Computer vision applications examples:
-  * Unsupervised learning of data structure for good weights initialization.
-  * Prediction of pixel wise values, such as semantic segmentation or depth.
+  * Deconvolution: save max pooled index location and use them for precise up-sampling. Good for precise boundaries estimation.
 * UNET
   * AE with skip connections between corresponding encoder and decoder parts.
   * The skip connections help to combine low level details that were lost in the compressing process, with the high level represtation extracted by the encoder.
   * Feature combination is done by simple concatenation.
+* Computer vision applications examples:
+  * Unsupervised learning of data structure for good weights initialization.
+  * Prediction of pixel-wise values, such as semantic segmentation or depth.
+  * Super-resolution.
+* Variational Auto Encoder (VAE)
+  * Main idea: learn probability distribution by the encoder, sample from it, and reconstruct sample using the decoder
+* Application - style transfer
+  * Content loss: minimaize *features* distance between original and generated images.
+  * Style loss: minimaize *Gram (inner product) Matrix* distance between original and generated images.
+  
