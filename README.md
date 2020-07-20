@@ -57,19 +57,19 @@ Four visualization tools:
   * In this lecture we introduce ways of working with *irregular* data, such as point clouds and graphs.
   * Example for new data domain - point cloud:
     * Rich information: each points can have multiple attributes, such as 3D location, RGB, semantic, etc.
-    * Permutation invariance: point order does not matter. E.g., we'd like to correctly classify a rabbit's point cloud if we strat traveling it from it's head or it's tail.
-    * Transformation invariance: E.g., we'd like to correctly classify a rabbit's point cloud for different rotations.
+    * Permutation invariance: point order does not matter. E.g., we'd like to correctly classify a rabbit's point cloud if we start traveling it from it's head or it's tail.
+    * Transformation invariance: E.g., we'd like to correctly classify a rabbit's point cloud for different rotations of the point cloud.
 * Graph neural networks (GNN)
-  * Simply speaking, graph is a data structure composed of nodes (data points) and edges (connections between data points) - each of which is represented by a vector.
-  * Key challanges:
+  * Simply stated, graph is a data structure composed of nodes (data points) and edges (connections between data points) - each of which is represented by a vector.
+  * Key challanges when working with graphs:
     * Variable sized inputs: the size of the graph (nodes and edges) can vary.
     * Need invariance to nodes permutations - nodes in different locations on the graph should be treated the same way.
   * Main idea: iteratively update graph reperensetation using information propogation steps.  
   * Single information propogation step is usually composed of:
     * Each node (and possibly also edge) gather information of it's neigboor nodes. This updtated node representation (embedding) is used to represent this node (or edge) from now on.
     * The information gathering is done using a learnable function, which combines data embeddings from near nodes and edges.
-    * After L steps each node has gathered information from nodes up to L degrees of separation from it.
+    * After L steps each node has gathered information from nodes up to L degrees of separation from it. This volume of awareness can be thought of the node's *receptive field*.
     * An information propogation step can be thought of the as the GNN counterpart of a layer in a CNN.
-  * Dealing with varible sized input is done using aggregation (e.g. sum, mean and max operation) of data from neigboor nodes.
-  * Invariance to nodes permutation is achived by treating local environments in differenct location on the graph in the same way.
+  * Dealing with varible sized input is done using aggregation of data from neigboor nodes in a way that is invariant to the number of those nodes (e.g. using sum, mean and max operation).
+  * Invariance to nodes permutation is achived by treating local environments in differenct location on the graph in the same way (e.g. with the same learnable function).
 
