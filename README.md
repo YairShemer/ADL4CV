@@ -5,7 +5,7 @@
 * Lectures videos: [https://www.youtube.com/playlist?list=PLog3nOPCjKBnjhuHMIXu4ISE4Z4f2jm39](https://www.youtube.com/playlist?list=PLog3nOPCjKBnjhuHMIXu4ISE4Z4f2jm39)
 * Slides: [https://dvl.in.tum.de/slides/adl4cv-ss20/](https://dvl.in.tum.de/slides/adl4cv-ss20/)
 
-## 1. Visualization and Interpretability
+## 1. [Visualization and Interpretability](https://www.youtube.com/watch?v=4M-kuW2huqU&list=PLog3nOPCjKBnjhuHMIXu4ISE4Z4f2jm39&index=2)
 ### Lecture outline
 Four visualization tools:
 * The occlusion experiment - output an importance score for each pixel of the input image by measuring the effect of an occlusion around the pixel.
@@ -13,11 +13,11 @@ Four visualization tools:
 * DeconvNet - Forward an image, zero out all filters part of a specific filter, and then apply the opposite operations.
 * Gradient ascent - optimize over the input image to maximize a specific class score.
 
-### Discusion
+### Discussion
 * It can be relevant for object detection task if apply classification setting on our objects.
 * Checking classification results on objects can be useful for getting a performance bound and for training the backbone.
 
-## 2. Similarity Learning
+## 2. [Similarity Learning](https://www.youtube.com/watch?v=6e65XfwmIWE&list=PLog3nOPCjKBnjhuHMIXu4ISE4Z4f2jm39&index=3)
 ### Lecture outline
 * Train siames network (with shared weights) and then measure the distance between features.
 * Train on positive pairs and negative pairs.
@@ -49,4 +49,27 @@ Four visualization tools:
 * Application - style transfer
   * Content loss: minimaize *features* distance between original and generated images.
   * Style loss: minimaize *Gram (inner product) Matrix* distance between original and generated images.
-  
+
+## 4. [Graph Neural Networks and Attention](https://www.youtube.com/watch?v=FbkE7FsHDkc&list=PLog3nOPCjKBnjhuHMIXu4ISE4Z4f2jm39&index=5)
+### Lecture outline
+* Introduction
+  * So far we dealt with images, which are structured in a *regular* grid formation. We used *regular* convolution kernels to learn and reperesent this kind of data.
+  * In this lecture we introduce ways of working with *irregular* data, such as point clouds and graphs.
+  * Example for new data domain - point cloud:
+    * Rich information: each points can have multiple attributes, such as 3D location, RGB, semantic, etc.
+    * Permutation invariance: point order does not matter. E.g., we'd like to correctly classify a rabbit's point cloud if we strat traveling it from it's head or it's tail.
+    * Transformation invariance: E.g., we'd like to correctly classify a rabbit's point cloud for different rotations.
+* Graph neural networks (GNN)
+  * Simply speaking, graph is a data structure composed of nodes (data points) and edges (connections between data points) - each of which is represented by a vector.
+  * Key challanges:
+    * Variable sized inputs: the size of the graph (nodes and edges) can vary.
+    * Need invariance to nodes permutations - nodes in different locations on the graph should be treated the same way.
+  * Main idea: iteratively update graph reperensetation using information propogation steps.  
+  * Single information propogation step is usually composed of:
+    * Each node (and possibly also edge) gather information of it's neigboor nodes. This updtated node representation (embedding) is used to represent this node (or edge) from now on.
+    * The information gathering is done using a learnable function, which combines data embeddings from near nodes and edges.
+    * After L steps each node has gathered information from nodes up to L degrees of separation from it.
+    * An information propogation step can be thought of the as the GNN counterpart of a layer in a CNN.
+  * Dealing with varible sized input is done using aggregation (e.g. sum, mean and max operation) of data from neigboor nodes.
+  * Invariance to nodes permutation is achived by treating local environments in differenct location on the graph in the same way.
+
