@@ -57,8 +57,8 @@ Four visualization tools:
   * In this lecture we introduce ways of working with *irregular* data, such as point clouds and graphs.
   * Example for new data domain - point cloud:
     * Rich information: each points can have multiple attributes, such as 3D location, RGB, semantic, etc.
-    * Permutation invariance: point order does not matter. E.g., we'd like to correctly classify a rabbit's point cloud if we start traveling it from it's head or it's tail.
-    * Transformation invariance: E.g., we'd like to correctly classify a rabbit's point cloud for different rotations of the point cloud.
+    * Permutation invariance: point order does not matter - we'd like to correctly classify a rabbit's point cloud if we start traveling it from it's head or it's tail.
+    * Transformation invariance: we'd like to correctly classify a rabbit's point cloud for different rotations of the point cloud.
 * Graph neural networks (GNN)
   * Simply stated, graph is a data structure composed of nodes (data points) and edges (connections between data points) - each of which is represented by a vector.
   * Key challanges when working with graphs:
