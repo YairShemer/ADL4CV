@@ -66,11 +66,11 @@ Four visualization tools:
     * Need invariance to nodes permutations - nodes in different locations on the graph should be treated the same way.
   * Main idea: iteratively update graph reperensetation using information propogation steps.  
   * Single information propogation step is usually composed of:
-    * Each node (and possibly also edge) gather information of it's neigboor nodes. This updtated node representation (embedding) is used to represent this node (or edge) from now on.
+    * Each node (and possibly also edge) gather information of it's neigboor nodes, and the updtated node representation (embedding) is used to represent this node (or edge) from now on.
     * The information gathering is done using a learnable function, which combines data embeddings from near nodes and edges.
     * After L steps each node has gathered information from nodes up to L degrees of separation from it. This volume of awareness can be thought of the node's *receptive field*.
     * An information propogation step can be thought of the as the GNN counterpart of a layer in a CNN.
-  * Dealing with varible sized input is done using aggregation of data from neigboor nodes in a way that is invariant to the number of those nodes (e.g. using sum, mean and max operation).
+  * Dealing with varible sized input is done using aggregation of data from neigboor nodes in a way that is invariant to the number of those nodes (e.g. using sum, mean and max operations).
   * Invariance to nodes permutation is achived by treating local environments in differenct location on the graph in the same way (e.g. with the same learnable function).
 * Applications:
   * Tracking obejcts in Videos - *interesting, should add short explaination*
