@@ -75,15 +75,14 @@ Four visualization tools:
 * Applications:
   * Tracking obejcts in Videos - *interesting, should add short explaination*
   * Video object sigmentation: the main idea is to model temporal consistency through a GNN.    
-
-Attention:
-* Mechanism that give more emphasis (i.e. assigning different weight) to some parts of the data, e.g. words in a sentence or locations on an image.
-* Firstly introduced in the field of machine translation, in order to help the forgetness problem in long sentences.
-* **Transformer** - an important variant of attetion, which uses *only* attention for NLP problems.
-  * Simply speaking, every word is connected to all the other words by attention weights.
-  * Can be viewed as a graph, where words are represented by nodes and attention weights by edges.
-  * More details can be found in the original paper *[Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)*
-* Soft vs. hard attention:
-  * Soft attention: weighted sum of the (normalized) attention weights. Deterministic, gradients are easily computed. *most commonly used*.
-  * Hard attention: (normalized) attention weights are treated as probability distribution, from which 1 value is sampled. Stochastic, gradients are *estimated* through Monte Carlo experiments.
-* Image captioning is an example for computer vision application which uses attention.
+* Attention:
+  * Mechanism that give more emphasis (i.e. assigning different weight) to some parts of the data, e.g. words in a sentence or locations on an image.
+  * Firstly introduced in the field of machine translation, in order to help the forgetness problem in long sentences.
+  * **Transformer** - an important variant of attetion, which uses *only* attention for NLP problems.
+    * Simply speaking, every word is connected to all the other words by attention weights.
+    * Can be viewed as a graph, where words are represented by nodes and attention weights by edges.
+    * More details can be found in the original paper *[Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)*
+  * Soft vs. hard attention:
+    * Soft attention: weighted sum of the (normalized) attention weights. Deterministic, gradients are easily computed. *most commonly used*.
+    * Hard attention: (normalized) attention weights are treated as probability distribution, from which 1 value is sampled. Stochastic, gradients are *estimated* through Monte Carlo experiments.
+  * Image captioning is an example for computer vision application which uses attention.
