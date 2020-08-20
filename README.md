@@ -86,3 +86,9 @@ Four visualization tools:
     * Soft attention: weighted sum of the (normalized) attention weights. Deterministic, gradients are easily computed. *most commonly used*.
     * Hard attention: (normalized) attention weights are treated as probability distribution, from which 1 value is sampled. Stochastic, gradients are *estimated* through Monte Carlo experiments.
   * Image captioning is an example for computer vision application which uses attention.
+
+## Project
+1. Build an interesting application based on similarity neural network.
+2. Visualize the neural network behavior and try to obtain some insights about it.
+3.Use Auto-Encoder to learn the data structure and to initialize the network and see if it improves the performance.
+4. Add attention mechanism to your network and try to obtain some insights about your network behavior. 
